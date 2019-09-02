@@ -51,7 +51,24 @@ i6 = Ingredient.new("Sugar", d1, b1, 50)
 i7 = Ingredient.new("Chocolate", d1, b1, 200)
 i8 = Ingredient.new("Chocolate Sprinkles", d2, b1, 100)
 
+###Lyft Exercise###
+p1 = Passenger.new("Annie")
+p2 = Passenger.new("Benny")
+p3 = Passenger.new("Patty")
 
+driver1 = Driver.new("Carl")
+driver2 = Drive.new("Andrew")
+
+ride1 = Ride.new(p1, driver1, 28)
+ride2 = Ride.new(p1, driver2, 14)
+ride3 = Ride.new(p1, driver1, 43)
+ride4 = Ride.new(p2, driver1, 30)
+ride5 = Ride.new(p2, driver2, 26)
+ride6 = Ride.new(p2, driver2, 62)
+ride7 = Ride.new(p3, driver1, 12)
+ride8 = Ride.new(p3, driver1, 20)
+ride9 = Ride.new(p1, driver2, 11)
+ride10 = Ride.new(p1, driver1, 19)
 
 
 binding.pry

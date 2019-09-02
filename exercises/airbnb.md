@@ -11,6 +11,7 @@ You are building an app for an Airbnb competitor
   - a trip belongs to a listing and a guest
 
 Write out the relationships using has_many, belongs_to and has_many_through.
+
 Create the necessary methods to connect these classes.
 
 #### Listing

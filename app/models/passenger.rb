@@ -21,9 +21,10 @@ class Passenger
     end
 
     def drivers
-        self.rides.map do |ride|
+        drivers = self.rides.map do |ride|
             ride.driver 
         end
+        drivers.uniq
     end
 
     def total_distance

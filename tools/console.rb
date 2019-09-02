@@ -57,7 +57,7 @@ p2 = Passenger.new("Benny")
 p3 = Passenger.new("Patty")
 
 driver1 = Driver.new("Carl")
-driver2 = Drive.new("Andrew")
+driver2 = Driver.new("Andrew")
 
 ride1 = Ride.new(p1, driver1, 28)
 ride2 = Ride.new(p1, driver2, 14)

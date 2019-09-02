@@ -70,6 +70,16 @@ ride8 = Ride.new(p3, driver1, 20)
 ride9 = Ride.new(p1, driver2, 11)
 ride10 = Ride.new(p1, driver1, 19)
 
+###IMDB Excercise###
+movie1 = Movie.new("Fated")
+
+char1 = Character.new("Ben", "Fated", "movie")
+
+
+
+
+
+
 
 binding.pry
 0

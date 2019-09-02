@@ -1,20 +1,15 @@
 require 'pry'
-class Movie
-    attr_reader(:name, :movie, :show)
+class Character
+    attr_reader(:name, :screen, :actor)
 
     @@all = []
 
-    def initialize(name, title, type)
-        if type == "film" || type == "movie"
-            @name = name
-            @movie = title
-            @@all << self
-            Movie.characters << self
-        elsif type == "show" || type == "tv" || type == "tv show"
-            @name = name
-            @show = title
-            @@all << self
-        end
+    def initialize(name, screen, actor)
+        @name = name
+        @screen = screen
+        @actor = actor
+        @@all << self
+        screen.characters << self  
     end
 
     def self.all
@@ -23,10 +18,15 @@ class Movie
 
     def movies
         Movie.all.select do |movie|
-            movie.name == self.movie
+            movie == self.screen
         end
     end
 
+    def shows
+        Show.all.select do |show|
+            show == self.screen
+        end
+    end
 
 
 

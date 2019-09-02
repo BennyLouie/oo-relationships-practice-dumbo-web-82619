@@ -72,8 +72,25 @@ ride10 = Ride.new(p1, driver1, 19)
 
 ###IMDB Excercise###
 movie1 = Movie.new("Fated")
+movie2 = Movie.new("Sacred")
+movie3 = Movie.new("Family")
 
-char1 = Character.new("Ben", "Fated", "movie")
+show1 = Show.new("Fated")
+show2 = Show.new("Avenging")
+show3 = Show.new("TVD")
+
+actor1 = Actor.new("Nina")
+actor2 = Actor.new("Benny")
+actor3 = Actor.new("Paul")
+actor4 = Actor.new("Danielle")
+
+char1 = Character.new("Ben", show1, actor2)
+char2 = Character.new("Carol", movie1, actor1)
+char3 = Character.new("Elena", show3, actor1)
+char4 = Character.new("Stephen", movie2, actor3)
+char5 = Character.new("Damon", movie3, actor2)
+char6 = Character.new("Hope", show2, actor4)
+char6 = Character.new("Blake", movie1, actor2)
 
 
 

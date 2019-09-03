@@ -136,6 +136,32 @@ pledge8 = Pledge.new(user4, project2, 10000)
 pledge9 = Pledge.new(user1, project2, 10000)
 pledge10 = Pledge.new(user2, project1, 1000)
 
+###Gym Exercise###
+trainer1 = Trainer.new("Carl")
+trainer2 = Trainer.new("Andrew")
+trainer3 = Trainer.new("Patty")
+trainer4 = Trainer.new("Jacob")
+
+client1 = Client.new("Benny", trainer1)
+client2 = Client.new("Kevin", trainer1)
+client3 = Client.new("Dennis", trainer2)
+client4 = Client.new("Annie")
+client5 = Client.new("Tiffany", trainer1)
+client6 = Client.new("George", trainer4)
+client7 = Client.new("Julie", trainer3)
+
+location1 = Location.new("Blink")
+location2 = Location.new("Dolphin")
+location3 = Location.new("Planet Fitness")
+location4 = Location.new("Dumbo Fitness")
+
+join1 = Join.new(trainer1, location1)
+join2 = Join.new(trainer1, location2)
+join3 = Join.new(trainer1, location4)
+join4 = Join.new(trainer2, location3)
+join5 = Join.new(trainer3, location1)
+join6 = Join.new(trainer4, location1)
+
 
 
 binding.pry

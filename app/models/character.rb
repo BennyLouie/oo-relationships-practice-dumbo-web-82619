@@ -1,15 +1,13 @@
 require 'pry'
 class Character
-    attr_reader(:name, :screen, :actor)
+    attr_reader(:name, :actor)
 
     @@all = []
 
-    def initialize(name, screen, actor)
+    def initialize(name, actor)
         @name = name
-        @screen = screen
         @actor = actor
-        @@all << self
-        screen.characters << self  
+        @@all << self 
     end
 
     def self.all
@@ -17,18 +15,38 @@ class Character
     end
 
     def movies
-        Movie.all.select do |movie|
-            movie == self.screen
+        Portrayed.all.select do |portrayal|
+            if portrayal.screen.class == Movie
+                portrayal.character == self
+            end
         end
     end
 
     def shows
-        Show.all.select do |show|
-            show == self.screen
+        Portrayed.all.select do |portrayal|
+            if portrayal.screen.class == Show
+                portrayal.character == self
+            end
         end
     end
 
+    def screens
+        self.movies + self.shows
+    end
 
+    def num_appearances
+        self.screens.size
+    end
 
+    def self.num_appearances
+        self.all.map do |char|
+            char.num_appearances
+        end
+    end
 
+    def self.most_appearances
+        self.all.select do |char|
+            char.num_appearances == self.num_appearances.max
+        end
+    end
 end

@@ -1,13 +1,11 @@
 require 'pry'
 class Show
     attr_reader(:name)
-    attr_accessor(:characters)
 
     @@all = []
 
     def initialize(name)
         @name = name
-        @characters = []
         @@all << self
     end
 
@@ -23,8 +21,11 @@ class Show
     end
 
     def characters
-        Character.all.select do |char|
-            char.screen == self
+        p = Portrayed.all.select do |portrayal|
+            portrayal.screen == self
+        end
+        p.map do |port|
+            port.character
         end
     end
 
@@ -35,13 +36,30 @@ class Show
     end
 
     def self.find_by_actor(name)
-        characters = Character.all.select do |character|
-            character.actor.name == name
+        portrayals = Portrayed.all.select do |port|
+            port.screen.class == self
         end
-        characters.map do |char|
-            char.screen
+        sp = portrayals.select do |port|
+            port.character.actor.name == name
+        end
+        show = sp.select do |p|
+            p.screen.class == self
+        end
+        found = show.map do |s|
+            s.screen
+        end
+        found.uniq
+    end
+
+    def on_the_big_screen
+        Movie.all.select do |movie|
+            movie.name.downcase == self.name.downcase
         end
     end
 
-
+    def episodes
+        Episode.all.select do |episode|
+            episode.show == self
+        end
+    end
 end

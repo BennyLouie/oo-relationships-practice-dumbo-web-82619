@@ -121,8 +121,22 @@ user4 = User.new("Carl", 1500000)
 user5 = User.new("Elsie", 2000000)
 user6 = User.new("Jing", 2500000)
 
-project1 = Project.new(user1, 25000)
-project2 = Project.new(user2, 30000)
+project1 = Project.new("Benny Charity", user1, 25000)
+project2 = Project.new("Benny Fund", user2, 30000)
+project3 = Project.new("Healthcare", user3, 25500)
+
+pledge1 = Pledge.new(user3, project1, 1500)
+pledge2 = Pledge.new(user4, project2, 1000)
+pledge3 = Pledge.new(user3, project2, 2000)
+pledge4 = Pledge.new(user4, project2, 10000)
+pledge5 = Pledge.new(user5, project2, 4000)
+pledge6 = Pledge.new(user6, project2, 500)
+pledge7 = Pledge.new(user4, project2, 1800)
+pledge8 = Pledge.new(user4, project2, 10000)
+pledge9 = Pledge.new(user1, project2, 10000)
+pledge10 = Pledge.new(user2, project1, 1000)
+
+
 
 binding.pry
 0

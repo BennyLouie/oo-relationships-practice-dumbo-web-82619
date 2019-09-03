@@ -113,10 +113,16 @@ portrayal11 = Portrayed.new(char7, show1)
 portrayal12 = Portrayed.new(char1, show2)
 portrayal13 = Portrayed.new(char2, show1)
 
+###CrowdFunding Exercise###
+user1 = User.new("Benny", 10000000)
+user2 = User.new("Kelvin", 7000000)
+user3 = User.new("Kenneth", 5000000)
+user4 = User.new("Carl", 1500000)
+user5 = User.new("Elsie", 2000000)
+user6 = User.new("Jing", 2500000)
 
-
-
-
+project1 = Project.new(user1, 25000)
+project2 = Project.new(user2, 30000)
 
 binding.pry
 0
